@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Feedback Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Course Feedback Form</h1>
+        
+        <div class="toggle-buttons">
+            <button id="studentFeedbackButton" class="active">Student Feedback</button>
+            <button id="teacherFeedbackButton">Teacher Feedback</button>
+        </div>
+        
+        <section id="student-feedback">
+            <h2>Student Feedback</h2>
+            <form id="studentForm">
+                <label for="studentName">Student Name:</label>
+                <input type="text" id="studentName" name="studentName" required>
+                
+                <label for="prnNo">PRN No.:</label>
+                <input type="text" id="prnNo" name="prnNo" required>
+                
+                <label for="rollNo">Roll No.:</label>
+                <input type="text" id="rollNo" name="rollNo" required>
+                
+                <label for="panel">Panel:</label>
+                <input type="text" id="panel" name="panel" required>
+                
+                <label for="courseName">Course Name:</label>
+                <input type="text" id="courseName" name="courseName" required>
+                
+                <label for="teacherName">Teacher Name:</label>
+                <input type="text" id="teacherName" name="teacherName" required>
+
+                <label for="studentAttendance">Attendance (%):</label>
+                <input type="number" id="studentAttendance" name="studentAttendance" required>
+                
+                <label>Course Feedback:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="courseFeedback" value="very bad" required> Very Bad</label>
+                    <label><input type="radio" name="courseFeedback" value="bad" required> Bad</label>
+                    <label><input type="radio" name="courseFeedback" value="average" required> Average</label>
+                    <label><input type="radio" name="courseFeedback" value="good" required> Good</label>
+                    <label><input type="radio" name="courseFeedback" value="very good" required> Very Good</label>
+                </div>
+                
+                <label>Teacher Feedback:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="teacherFeedback" value="very bad" required> Very Bad</label>
+                    <label><input type="radio" name="teacherFeedback" value="bad" required> Bad</label>
+                    <label><input type="radio" name="teacherFeedback" value="average" required> Average</label>
+                    <label><input type="radio" name="teacherFeedback" value="good" required> Good</label>
+                    <label><input type="radio" name="teacherFeedback" value="very good" required> Very Good</label>
+                </div>
+                
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+
+        <section id="teacher-feedback" style="display: none;">
+            <h2>Teacher Feedback</h2>
+            <form id="teacherForm">
+                <label for="teacherName">Teacher Name:</label>
+                <input type="text" id="teacherName" name="teacherName" required>
+                
+                <label for="studentNameTeacher">Student Name:</label>
+                <input type="text" id="studentNameTeacher" name="studentNameTeacher" required>
+                
+                <label for="rollNoTeacher">Roll No.:</label>
+                <input type="text" id="rollNoTeacher" name="rollNoTeacher" required>
+                
+                <label for="panelTeacher">Panel:</label>
+                <input type="text" id="panelTeacher" name="panelTeacher" required>
+                
+                <label for="prnNoTeacher">PRN No.:</label>
+                <input type="text" id="prnNoTeacher" name="prnNoTeacher" required>
+
+                <label for="studentFeedbackTeacher">Student Feedback:</label>
+                <textarea id="studentFeedbackTeacher" name="studentFeedbackTeacher" required></textarea>
+                
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
