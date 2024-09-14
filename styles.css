@@ -5,8 +5,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -16,6 +17,8 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 80%;
     max-width: 600px;
+    overflow-y: auto;
+    box-sizing: border-box;
     /* padding-top: 400px; */
 }
 
@@ -44,6 +47,7 @@ input, select, textarea, button {
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
+    width: 100%;
 }
 
 button {
@@ -59,7 +63,7 @@ button:hover {
 
 .toggle-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin-bottom: 20px;
 }
 
@@ -69,6 +73,8 @@ button:hover {
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
+    flex: 1;
+    transition: background-color 0.3s;
 }
 
 .toggle-buttons button.active {
